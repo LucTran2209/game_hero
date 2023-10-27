@@ -41813,6 +41813,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elf_Lancer
       objectReference: {fileID: 0}
+    - target: {fileID: 4454615809836353033, guid: 8f7c2454dd8f76a42a1b2cbf4b7d095b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454615809836353033, guid: 8f7c2454dd8f76a42a1b2cbf4b7d095b, type: 3}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     - target: {fileID: 4988211795058739578, guid: 8f7c2454dd8f76a42a1b2cbf4b7d095b, type: 3}
       propertyPath: leftLimit
       value: 

@@ -42,11 +42,11 @@ public class PlayerCombat : MonoBehaviour
     {     
 		if (GetComponent<SpriteRenderer>().flipX)
 		{
-			attackPoint.position = new Vector3(transform.position.x - attackRange, transform.position.y+0.8f);
+			attackPoint.position = new Vector3(transform.position.x - attackRange, transform.position.y);
 		}
 		else
 		{
-			attackPoint.position = new Vector3(transform.position.x + attackRange, transform.position.y + 0.8f);
+			attackPoint.position = new Vector3(transform.position.x + attackRange, transform.position.y);
 		}
 
 
