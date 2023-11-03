@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Follow: {fileID: 2010544446}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 7.5
+    OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -281,7 +281,7 @@ Transform:
   m_GameObject: {fileID: 134258278}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.46, y: -7.7999997, z: -10}
+  m_LocalPosition: {x: 19.46, y: -7.07, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 336359891}
   - component: {fileID: 336359893}
   - component: {fileID: 336359892}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1099,7 +1099,7 @@ GameObject:
   - component: {fileID: 416440721}
   - component: {fileID: 416440723}
   - component: {fileID: 416440722}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: TilemapDark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5657,7 +5657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3261468063930788505, guid: 2f0c5f461eb3b9646b3da4ceaade2ae8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.65
+      value: -8.57
       objectReference: {fileID: 0}
     - target: {fileID: 3261468063930788505, guid: 2f0c5f461eb3b9646b3da4ceaade2ae8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5707,14 +5707,6 @@ PrefabInstance:
       propertyPath: playerHealthSlider
       value: 
       objectReference: {fileID: 618945430}
-    - target: {fileID: 6857926145029330526, guid: 2f0c5f461eb3b9646b3da4ceaade2ae8, type: 3}
-      propertyPath: m_Size.y
-      value: 1.56864
-      objectReference: {fileID: 0}
-    - target: {fileID: 6857926145029330526, guid: 2f0c5f461eb3b9646b3da4ceaade2ae8, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.89909947
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -44198,7 +44190,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -44223,7 +44215,7 @@ Transform:
   m_GameObject: {fileID: 1569762134}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.46, y: -7.7999997, z: -10}
+  m_LocalPosition: {x: 19.46, y: -7.07, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45430,9 +45422,9 @@ GameObject:
   - component: {fileID: 2007252676}
   - component: {fileID: 2007252677}
   - component: {fileID: 2007252679}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
