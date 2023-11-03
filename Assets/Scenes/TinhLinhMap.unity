@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1096915275}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 8.498989
+    OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -41604,7 +41604,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.498989
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -41805,9 +41805,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1854113451550025156, guid: 8f7c2454dd8f76a42a1b2cbf4b7d095b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1946435123293611754, guid: 8f7c2454dd8f76a42a1b2cbf4b7d095b, type: 3}
       propertyPath: m_Mass
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985011897320338742, guid: 8f7c2454dd8f76a42a1b2cbf4b7d095b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4454615809836353033, guid: 8f7c2454dd8f76a42a1b2cbf4b7d095b, type: 3}
       propertyPath: m_Name
@@ -41836,6 +41844,22 @@ PrefabInstance:
     - target: {fileID: 7079868725313292795, guid: 8f7c2454dd8f76a42a1b2cbf4b7d095b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444212723334078682, guid: 8f7c2454dd8f76a42a1b2cbf4b7d095b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938178348933074239, guid: 8f7c2454dd8f76a42a1b2cbf4b7d095b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944158719876941116, guid: 8f7c2454dd8f76a42a1b2cbf4b7d095b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521671879889984317, guid: 8f7c2454dd8f76a42a1b2cbf4b7d095b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8856621065624320195, guid: 8f7c2454dd8f76a42a1b2cbf4b7d095b, type: 3}
       propertyPath: m_AnchorMax.x
