@@ -62,7 +62,7 @@ public class AttributeManager : MonoBehaviour
 			isHit = false;
 		}
 
-		if (resistanceDuration >= 0 && isResistance)
+		if (resistanceDuration > 0 && isResistance)
 		{
 			ResistanceCooldown();
 		}
@@ -76,6 +76,7 @@ public class AttributeManager : MonoBehaviour
 		{
 			//Death
 			animator.SetTrigger("Death");
+			rigidbody2d.gravityScale = 1;
 			death = true;
 			Destroy(gameObject, 3f);
 		}
