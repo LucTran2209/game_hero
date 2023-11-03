@@ -9,6 +9,7 @@ TagManager:
   - Monster
   - ItemHealth
   - Trap
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
@@ -46,9 +47,18 @@ TagManager:
   - name: Background
     uniqueID: 2267296761
     locked: 0
+  - name: dark
+    uniqueID: 1533258425
+    locked: 0
+  - name: water
+    uniqueID: 1435826943
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Projectile
     uniqueID: 1889471311
+    locked: 0
+  - name: TileMap
+    uniqueID: 2968383521
     locked: 0
