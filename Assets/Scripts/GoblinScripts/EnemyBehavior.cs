@@ -124,10 +124,14 @@ public abstract class EnemyBehavior : MonoBehaviour
 	#region Enemy Action
 	protected void Stand()
 	{
-		rigi.velocity = new Vector2(0, rigi.velocity.y);
-		animator.SetBool("Walk", false);
-		animator.SetBool("Run", false);
-		Flip();
+		if (!cheackAnimationAttack())
+		{
+			rigi.velocity = new Vector2(0, rigi.velocity.y);
+			animator.SetBool("Walk", false);
+			animator.SetBool("Run", false);
+			Flip();
+		}
+		
 	}
 	protected void StopAttack()
 	{
@@ -270,7 +274,7 @@ public abstract class EnemyBehavior : MonoBehaviour
 	}
 	protected bool checkPath()
 	{
-		hitGround = hitGround = Physics2D.Raycast(rayCastGround.position, Vector2.down, rayCastLengt, groundMark);
+		hitGround = Physics2D.Raycast(rayCastGround.position, Vector2.down, rayCastLengt, groundMark);
 		return hitGround.collider != null;
 	}
 	#endregion

@@ -40,16 +40,6 @@ public class PlayerCombat : MonoBehaviour
 
 	private void Attack()
     {     
-		if (GetComponent<SpriteRenderer>().flipX)
-		{
-			attackPoint.position = new Vector3(transform.position.x - attackRange, transform.position.y+0.8f);
-		}
-		else
-		{
-			attackPoint.position = new Vector3(transform.position.x + attackRange, transform.position.y + 0.8f);
-		}
-
-
 		m_currentAttack++;
 
 		// Loop back to one after third attack
