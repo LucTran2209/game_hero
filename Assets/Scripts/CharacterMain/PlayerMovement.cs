@@ -8,7 +8,7 @@ namespace Assets.Scripts
     {
 
         [SerializeField] float m_speed = 4.0f;
-        [SerializeField] float m_jumpForce = 7.5f;
+        [SerializeField] public float m_jumpForce = 7.5f;
         [SerializeField] float m_rollForce = 6.0f;
 
         // Audio
