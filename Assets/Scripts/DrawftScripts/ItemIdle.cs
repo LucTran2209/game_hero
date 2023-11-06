@@ -23,6 +23,7 @@ public class ItemIdle : MonoBehaviour
 		if (other.gameObject.tag == "Player")
 		{
 			int count = PlayerPrefs.GetInt("QuantityItem");
+			
 			count++;
 			PlayerPrefs.SetInt("QuantityItem", count);
 			

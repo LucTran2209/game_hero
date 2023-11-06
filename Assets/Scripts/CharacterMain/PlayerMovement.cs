@@ -18,6 +18,7 @@ namespace Assets.Scripts
         [SerializeField] AudioSource audioPlayerJump;
         [SerializeField] AudioSource audioPlayerRoll;
         [SerializeField] AudioSource audioPlayerGetItem;
+        [SerializeField] AudioSource audioPlayerGetTreasure;
 
 
         private Animator m_animator;
@@ -236,6 +237,10 @@ namespace Assets.Scripts
             if (other.tag == "ItemHealth")
             {
                 audioPlayerGetItem.Play();
+            }
+            if (other.tag == "Treasure")
+            {
+                audioPlayerGetTreasure.Play();
             }
         }
 
