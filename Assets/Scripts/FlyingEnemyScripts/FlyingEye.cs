@@ -18,6 +18,7 @@ public class FlyingEye : MonoBehaviour
 
     Animator _animator;
     Rigidbody2D rigi;
+    Collider2D body;
 
 
     public bool HasTarget { 
@@ -35,6 +36,7 @@ public class FlyingEye : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         rigi = GetComponent<Rigidbody2D>();
+        body = GetComponent<Collider2D>();
     }
 
     private void Start()
@@ -91,6 +93,15 @@ public class FlyingEye : MonoBehaviour
         if ((rigi.velocity.x < 0 && localScale.x > 0) || (rigi.velocity.x > 0 && localScale.x < 0))
         {
             transform.localScale = new Vector2(-1 * localScale.x, localScale.y);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D trig)
+    {
+        //Set enemies to pass through each other
+        if (trig.tag == "Monster")
+        {
+            Physics2D.IgnoreCollision(body, trig.GetComponent<Collider2D>());
         }
     }
 }
