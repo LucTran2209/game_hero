@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogController : MonoBehaviour
 {
     public GameObject panelLamMo;
     public TextMeshProUGUI txt;
+    public Button skipButton;
     private int currentDialogIndex = 0;
     private string currentDialog = "";
-    private float letterDelay = 0.1f;
+    private float letterDelay = 0.05f;
     private float letterTimer = 0f;
     private bool isDisplayingText = false;
 
@@ -17,15 +19,14 @@ public class DialogController : MonoBehaviour
 
     void Start()
     {
-        dialog.Add("Chào dũng sĩ loài người, chắc hẳn bạn đến từ 1 tương lai đang đầy đau đớn với nguy cơ bị hủy diệt nên mới quay lại quá khứ thế này !!!");
-        dialog.Add("Đây là thế giới mà loài người của bạn chung sống với rất nhiều loài và tộc đặc biệt Goblin, Tinh Linh, Người Lùn, Người Sói, Thiên Thần, Long Tộc.");
-        dialog.Add("Hãy cố gắng thống lĩnh các chủng tộc để có thể đoàn kết vượt qua thảm họa ở tương lai của bạn.");
-        dialog.Add("Mỗi chủng tộc đều có năng lực và những báu vật độc đáo nhưng không phải tộc nào cũng dễ dàng quy phục đâu (có khi phải dùng vũ lực đó)");
-        dialog.Add("Tôi tin với ý chí và năng lực của bạn thì mọi thứ đều có thể !!!");
-        dialog.Add("!!! LÊN ĐƯỜNG !!!");
-
-
-        ShowNextDialog();
+		dialog.Add("Chao dung si loai nguoi, chac chan ban den tu 1 tuong lai dang day dau don voi nguy co bi huy diet nen moi quay lai qua khu the nay !!!");
+		dialog.Add("Day la the gioi ma loai nguoi cua ban chung song voi rat nhieu loai va toc dac biet Goblin, Tinh Linh, Nguoi Lun, Nguoi Soi, Thien Than, Long Tc.");
+		dialog.Add("Hay co gang thong linh cac chung toc de co the doan ket vuot qua tham hoa o tuong lai cua ban.");
+		dialog.Add("Moi chung toc deu co nang luc va nhung bau vat doc dao nhung khong phai toc nao cung de dang quy phuc dau (co khi phai dung vu luc do)");
+		dialog.Add("Toi tin voi y chi va nang luc cua ban thi moi thu deu co the !!!");
+		dialog.Add("!!! LEN DUONG !!!");
+		ShowNextDialog();
+        skipButton.onClick.AddListener(SkipDialog);
     }
 
     void Update()
@@ -46,8 +47,7 @@ public class DialogController : MonoBehaviour
             else
             {
                 // Hide the panel when all dialog is displayed
-                gameObject.SetActive(false);
-                panelLamMo.SetActive(false);
+                Close();
             }
         }
     }
@@ -58,6 +58,10 @@ public class DialogController : MonoBehaviour
         txt.text = "";
         letterTimer = 0f;
         isDisplayingText = true;
+    }
+    void Close() {
+        gameObject.SetActive(false);
+        panelLamMo.SetActive(false);
     }
 
     void FixedUpdate()
@@ -75,5 +79,12 @@ public class DialogController : MonoBehaviour
                 }
             }
         }
+    }
+
+    void SkipDialog()
+    {
+        // Bỏ qua tất cả đoạn hội thoại còn lại và ẩn panel
+        
+        Close();
     }
 }
