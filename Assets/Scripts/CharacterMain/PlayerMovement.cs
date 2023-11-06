@@ -18,6 +18,7 @@ namespace Assets.Scripts
         [SerializeField] AudioSource audioPlayerJump;
         [SerializeField] AudioSource audioPlayerRoll;
         [SerializeField] AudioSource audioPlayerGetItem;
+        [SerializeField] AudioSource audioPlayerGetTreasure;
 
 
         private Animator m_animator;
@@ -51,8 +52,13 @@ namespace Assets.Scripts
             m_playeHealth = GetComponent<PlayerHealth>();
         }
 
-        // Update is called once per frame
-        void Update()
+		private void Start()
+		{
+			PlayerPrefs.SetInt("QuantityItem", 0);
+		}
+
+		// Update is called once per frame
+		void Update()
         {          
             // check if PlayerHeath is dead, stop move
             if (m_playeHealth.IsDead())
@@ -231,6 +237,10 @@ namespace Assets.Scripts
             if (other.tag == "ItemHealth")
             {
                 audioPlayerGetItem.Play();
+            }
+            if (other.tag == "Treasure")
+            {
+                audioPlayerGetTreasure.Play();
             }
         }
 
