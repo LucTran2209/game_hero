@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -46,5 +46,19 @@ public class Setting : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();   
+    }
+
+    // Load lại scene
+    public void LoadMapAgain()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(5);
+    }
+
+    // Load lại scene nguoi lun
+    public void LoadMapNguoiLun()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(3);
     }
 }
