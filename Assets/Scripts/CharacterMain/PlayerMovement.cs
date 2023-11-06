@@ -41,8 +41,13 @@ namespace Assets.Scripts
             m_playeHealth = GetComponent<PlayerHealth>();
         }
 
-        // Update is called once per frame
-        void Update()
+		private void Start()
+		{
+			PlayerPrefs.SetInt("QuantityItem", 0);
+		}
+
+		// Update is called once per frame
+		void Update()
         {
             // check if PlayerHeath is dead, stop move
             if (m_playeHealth.IsDead())

@@ -26,7 +26,7 @@ namespace Assets.Scripts.CharacterMain
         /// <summary>
         /// Lượng máu cộng thêm trong quá trình chơi
         /// </summary>
-        public const string AdditionHealth = "AdditionHealth";
+        public const string AdditionHealth = "AdditionHealth"; 
        
     }
 }
