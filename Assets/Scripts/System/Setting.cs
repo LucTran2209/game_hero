@@ -61,4 +61,11 @@ public class Setting : MonoBehaviour
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(3);
     }
+
+    // Load lại scene boss
+    public void LoadMapBoss()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(8);
+    }
 }

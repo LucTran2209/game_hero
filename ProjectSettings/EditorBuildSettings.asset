@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DragonMap.unity
     guid: d2698d8d260ab704b9677794aaf54e16
+  - enabled: 1
+    path: Assets/Scenes/BossMap.unity
+    guid: 3a327f6dc5fa9a8498d69387c15fa738
   m_configObjects: {}

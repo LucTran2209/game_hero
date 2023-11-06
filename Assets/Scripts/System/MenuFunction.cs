@@ -30,7 +30,7 @@ public class MenuFunction : MonoBehaviour
     public void LoadDragonMap()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(8);
     }
 
     // Player click choose Elf map
