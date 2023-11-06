@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -71,7 +72,6 @@ public class AttributeManager : MonoBehaviour
 	public void TakeDmg(float damage)
 	{
 		Health = Mathf.Clamp(Health - (damage - Ammor / 100 * damage) * (100 - damageRessitance) / 100, 0, maxHealth);
-
 		if (Health <= 0)
 		{
 			//Death
@@ -100,6 +100,11 @@ public class AttributeManager : MonoBehaviour
 		if (trig.tag != "Ground" && death) 
 		{
 			Physics2D.IgnoreCollision(trig.GetComponent<Collider2D>(), colider2d);
+		}
+		if (trig.tag == "PowerBall")
+		{
+			TakeDmg(100);
+			trig.gameObject.SetActive(false);
 		}
 	}
 

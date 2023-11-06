@@ -10,6 +10,7 @@ TagManager:
   - ItemHealth
   - Trap
   - MovingPlatform
+  - PowerBall
   layers:
   - Default
   - TransparentFX

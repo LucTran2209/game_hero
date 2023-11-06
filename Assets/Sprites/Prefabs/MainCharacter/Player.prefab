@@ -505,6 +505,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7879219, y: 0.09896898}
   m_EdgeRadius: 0
+--- !u!1 &2034311620112706246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6354605433073630237}
+  m_Layer: 7
+  m_Name: AttackLong
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6354605433073630237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034311620112706246}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.14, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3261468063930788505}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2283930600921633223
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +735,7 @@ Transform:
   - {fileID: 1526036297187012478}
   - {fileID: 1515259805839670113}
   - {fileID: 1996720859641899454}
+  - {fileID: 6354605433073630237}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7099727051777278200
@@ -846,11 +878,14 @@ MonoBehaviour:
   audioPlayerJump: {fileID: 7025278839796003363}
   audioPlayerRoll: {fileID: 6663197843505777013}
   audioPlayerGetItem: {fileID: 7949109666086920201}
+  m_facingDirection: 1
   CheckWall: {fileID: 1996720859641899454}
   wallMark:
     serializedVersion: 2
     m_Bits: 256
   checkLength: 0.4
+  attackStartPosition: {fileID: 6354605433073630237}
+  powerBall: {fileID: 4132640507443198682, guid: 9c365f986a4aebf46bc300a890520401, type: 3}
 --- !u!70 &6857926145029330526
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

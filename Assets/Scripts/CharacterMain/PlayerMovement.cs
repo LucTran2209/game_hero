@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Assets.Scripts.CharacterMain;
 
 namespace Assets.Scripts
 {
     public class PlayerMovement : MonoBehaviour
     {
+
 
         [SerializeField] float m_speed = 4.0f;
         [SerializeField] public float m_jumpForce = 7.5f;
@@ -26,7 +28,7 @@ namespace Assets.Scripts
         private bool m_isGrounded = false;
         private bool m_isRolling = false;
 
-        private int m_facingDirection = 1;
+        public int m_facingDirection = 1;
         private float m_delayToIdle = 0.0f;
         private readonly float m_rollDuration = 8f/14f;
         private float m_rollCurrentTime;
@@ -35,6 +37,10 @@ namespace Assets.Scripts
         [SerializeField] private float checkLength;
         private RaycastHit2D hitWall;
 
+        public Transform attackStartPosition;
+        public GameObject powerBall;
+        float fireRate = 0.5f;
+        float nextFire = 0;
 
         // Use this for initialization
         void Awake()
@@ -47,7 +53,7 @@ namespace Assets.Scripts
 
         // Update is called once per frame
         void Update()
-        {
+        {          
             // check if PlayerHeath is dead, stop move
             if (m_playeHealth.IsDead())
             {
@@ -123,7 +129,12 @@ namespace Assets.Scripts
             //Set AirSpeed in animator when jumping
             m_animator.SetFloat("AirSpeedY", m_body2d.velocity.y);
 
-
+            // Attack powerball
+            if (Input.GetKeyDown(KeyCode.L) && PlayerPrefs.GetInt(Key.Skill4) == 1)
+            {
+                m_animator.SetTrigger("Attack1" );
+                FirePowerBall();
+            }else
             // Block
             if (Input.GetMouseButtonDown(1) && !m_isRolling)
             {
@@ -180,6 +191,23 @@ namespace Assets.Scripts
                 {
                     // Debug.Log(" stop run");
                     m_animator.SetInteger("AnimState", 0);
+                }
+            }
+        }
+
+        void FirePowerBall()
+        {
+            if (Time.time > nextFire)
+            {
+                nextFire = Time.time + fireRate;
+
+                if (m_facingDirection == 1)
+                {
+                    Instantiate(powerBall, attackStartPosition.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+                }
+                else
+                {
+                    Instantiate(powerBall, attackStartPosition.position, Quaternion.Euler(new Vector3(0, 0, 180)));
                 }
             }
         }

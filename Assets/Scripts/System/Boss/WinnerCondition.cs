@@ -1,3 +1,4 @@
+using Assets.Scripts.CharacterMain;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,10 +13,9 @@ public class WinnerCondition : MonoBehaviour
     {
         AttributeManager health = GetComponent<AttributeManager>();
         if (health.IsDeadth())
-        {
-                   
+        {                   
             StartCoroutine(Winner(2f));
-            
+            PlayerPrefs.SetInt(Key.Skill4, 1);
         }
         
     }

@@ -27,6 +27,10 @@ namespace Assets.Scripts.CharacterMain
         /// Lượng máu cộng thêm trong quá trình chơi
         /// </summary>
         public const string AdditionHealth = "AdditionHealth";
-       
+
+        /// <summary>
+        /// Đánh bại từ trưởng goblin nhận được sách kỹ năng đánh xa
+        /// </summary>
+        public const string Skill4 = "Skill4";
     }
 }
