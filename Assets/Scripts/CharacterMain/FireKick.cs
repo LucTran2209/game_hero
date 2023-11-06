@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +6,11 @@ using UnityEngine;
 public class FireKick : MonoBehaviour
 {
 
-    [SerializeField] private GameObject kickPrefab;
-    [SerializeField] private GameObject attackPoint;
-    private float speed = 5f;
-    private Vector3 attackPointPosition;
+    public Transform attackStartPosition;
+    public GameObject powerBall;
+    float fireRate = 0.5f;
+    float nextFire = 0;
+    
 
 
     // Start is called before the first frame update
@@ -20,23 +22,31 @@ public class FireKick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        attackPointPosition = attackPoint.transform.position;
-        if (Input.GetKey(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.L))
         {
-            Vector3 v;
-            if (attackPointPosition.x > 0)
+            FirePowerBall();
+        }
+        
+    }
+
+    void FirePowerBall()
+    {
+        if (Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+
+            
+
+            if (true)
             {
-                v = new Vector3(1, 0, 0);
+                Instantiate(powerBall, attackStartPosition.position, Quaternion.Euler(new Vector3(0, 0, 0)));
             }
             else
             {
-                v = new Vector3(-1, 0, 0);
-            }         
-            GameObject kick = Instantiate(kickPrefab);
-            kick.transform.position = attackPointPosition;
-            kick.transform.Translate(speed * v * Time.deltaTime);
-            kick.SetActive(true);    
-                      
+                Instantiate(powerBall, attackStartPosition.position, Quaternion.Euler(new Vector3(0, 0, 180)));
+            }
         }
     }
+
 }
+

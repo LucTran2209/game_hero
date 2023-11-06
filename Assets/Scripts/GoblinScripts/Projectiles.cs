@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Tilemaps;
+
 using UnityEngine;
 
 public class Projectiles : MonoBehaviour
@@ -10,7 +7,7 @@ public class Projectiles : MonoBehaviour
     public Transform target;
     public float lifetime;
     
-    private Vector3 directionShoot;
+    private Vector2 directionShoot = Vector2.zero;
     private bool hit;
     private float intLifetime;
     private bool shoot;
@@ -60,7 +57,7 @@ public class Projectiles : MonoBehaviour
 	private void Flip()
 	{
 		Vector3 rotation = transform.eulerAngles;
-		if (transform.position.x > target.position.x)
+		if (directionShoot.x < 0 || (target != null && transform.position.x > target.position.x))
 		{
 			rotation.y = 180f;
 		}
@@ -75,8 +72,12 @@ public class Projectiles : MonoBehaviour
 	public void Shoot()
     {
         shoot = true;
-		directionShoot = (target.position - transform.position).normalized;
-        if(directionShoot.x > 0f)
+        if(directionShoot == Vector2.zero)
+        {
+            directionShoot = (target.position - transform.position).normalized;
+
+        }
+        if (directionShoot.x > 0f)
         {
             float rot = Mathf.Atan2(-directionShoot.y, -directionShoot.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0,0, rot - 180);
@@ -86,7 +87,7 @@ public class Projectiles : MonoBehaviour
 			float rot = Mathf.Atan2(directionShoot.y, -directionShoot.x) * Mathf.Rad2Deg;
 			transform.rotation = Quaternion.Euler(0, 180, rot);
 		}
-
+        
 	}
 
 	public void SetDirection(Transform _target)
@@ -99,7 +100,17 @@ public class Projectiles : MonoBehaviour
         
     }
 
-	private void OnTriggerEnter2D(Collider2D trig)
+    public void SetDirection(Vector2 direction)
+    {
+        lifetime = 10f;
+        gameObject.SetActive(true);
+        hit = false;
+        hitBox.enabled = true;
+        directionShoot = direction.normalized;
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D trig)
 	{
 		if(trig.tag == "Player")
         {
