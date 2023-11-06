@@ -33,9 +33,9 @@ public class SpawnArea : MonoBehaviour
         if(trig.tag == "Monster")
         {
             var behavior = trig.GetComponent<EnemyBehavior>();
-			
-			behavior.leftLimit = behavior.leftLimit==null? leftLimit:behavior.leftLimit;
-			behavior.rightLimit = behavior.rightLimit == null ? rightLimit : behavior.rightLimit;
+
+			behavior.leftLimit = leftLimit;
+			behavior.rightLimit = rightLimit;
 			behavior.SelectTarget();
 			Enemies.Add(trig.gameObject);
         }
