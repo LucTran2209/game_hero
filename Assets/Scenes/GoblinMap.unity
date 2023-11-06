@@ -7967,7 +7967,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 25
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -8010,7 +8010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4426fdb6d362804aa3e6a7450c7d126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 741677189}
 --- !u!1001 &828180748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10167,7 +10167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 08a0ec8d193393a4dac1d772471b574b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74535fd832afe004286cc837e760cb5a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
