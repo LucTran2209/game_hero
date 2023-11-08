@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Attack: 120
-  Ammor: 20
+  Ammor: 50
   Health: 1000
   bloodSlider: {fileID: 5459742089235054009}
   item1: {fileID: 1263751194853019065, guid: 6c25f567bb747714997b368390984bd3, type: 3}
