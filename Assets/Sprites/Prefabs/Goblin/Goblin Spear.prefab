@@ -199,7 +199,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.9334407, y: -0.28047037}
+  m_Offset: {x: 0.8368373, y: -0.37017298}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -210,7 +210,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8668814, y: 0.3163538}
+  m_Size: {x: 3.0600882, y: 0.081746936}
   m_EdgeRadius: 0
 --- !u!1 &3124277990018678113
 GameObject:
@@ -827,6 +827,15 @@ MonoBehaviour:
   Ammor: 0
   Health: 800
   bloodSlider: {fileID: 6386173621880893076}
+  item1: {fileID: 1263751194853019065, guid: 6c25f567bb747714997b368390984bd3, type: 3}
+  item2: {fileID: 7846441516013633475, guid: 98cb3d615e489304fa6fe8d6cb8c7b61, type: 3}
+  item3: {fileID: 7807538149227597638, guid: a0c42580d72573c4e9dfb093ce534263, type: 3}
+  item4: {fileID: 4620095193232711880, guid: 0e0e24044c5e54b47a48d6467f540840, type: 3}
+  item5: {fileID: 7224801603499244736, guid: 17f8203dd0aa1114ea6dd2c32bf2d21a, type: 3}
+  item6: {fileID: 2202359487632238302, guid: 4092dce54822fc842b0f8372d8e52662, type: 3}
+  item7: {fileID: 3927076103231467252, guid: 744370836f7546d42a4dcb38c404ccd0, type: 3}
+  item8: {fileID: 4165086724200593266, guid: 30ff5bb5a5a38af409b1324531b16e04, type: 3}
+  effect: {fileID: 7512106542484750629, guid: 65860aeaa8bd5aa4db6c2eb5d2015baf, type: 3}
 --- !u!114 &6328558874406984610
 MonoBehaviour:
   m_ObjectHideFlags: 0

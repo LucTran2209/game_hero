@@ -145,7 +145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7396088650869260626
 Transform:
   m_ObjectHideFlags: 0
@@ -269,6 +269,15 @@ MonoBehaviour:
   Ammor: 0
   Health: 1000
   bloodSlider: {fileID: 8254414764316725056}
+  item1: {fileID: 0}
+  item2: {fileID: 0}
+  item3: {fileID: 0}
+  item4: {fileID: 0}
+  item5: {fileID: 0}
+  item6: {fileID: 0}
+  item7: {fileID: 0}
+  item8: {fileID: 0}
+  effect: {fileID: 7512106542484750629, guid: 65860aeaa8bd5aa4db6c2eb5d2015baf, type: 3}
 --- !u!114 &8581474165501985009
 MonoBehaviour:
   m_ObjectHideFlags: 0
