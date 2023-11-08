@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 734124379456808090}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.07, y: 1.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -263,12 +263,14 @@ MonoBehaviour:
   AttackMethod:
   - {fileID: 2350314097510903015}
   - {fileID: 7581556927684255369, guid: 43a7cda2cdc69104d8101ee66edc50f9, type: 3}
+  - {fileID: 1749379954075818226, guid: 2d8cc0d6db4dcdf4bb0a1f032fe98942, type: 3}
+  - {fileID: 5302639292724517835, guid: 145ea8267a38ed344bdb45682bae8f98, type: 3}
   rangePosition: {fileID: 7931426755245464744}
   changeTimer: 10
   slideSpeed: 6
-  pivot: {fileID: 0}
+  pivot: {fileID: 4051038915642927282}
   skill1Timer: 0
-  AttackRain: {fileID: 0}
+  AttackRain: {fileID: 9176253053715799060}
   RainNumber: 2
   skill2Timer: 0
 --- !u!1 &926414524499353104
@@ -727,7 +729,7 @@ Transform:
   m_GameObject: {fileID: 4554565818707688908}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.84, y: -5.47, z: 0}
+  m_LocalPosition: {x: 10.84, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -967,7 +969,7 @@ Transform:
   m_GameObject: {fileID: 6791303451246206711}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.2, y: -5.39, z: 0}
+  m_LocalPosition: {x: -12.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
