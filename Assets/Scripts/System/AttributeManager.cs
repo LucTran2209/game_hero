@@ -78,6 +78,7 @@ public class AttributeManager : MonoBehaviour
 			animator.SetTrigger("Death");
 			rigidbody2d.gravityScale = 1;
 			death = true;
+			//gameObject.SetActive(false);
 			Destroy(gameObject, 3f);
 		}
 

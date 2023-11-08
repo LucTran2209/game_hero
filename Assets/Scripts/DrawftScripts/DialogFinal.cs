@@ -17,7 +17,7 @@ public class DialogFinal : MonoBehaviour
             // Khi người chơi vào khoảng cách gần với vật thể, cho phép hiển thị đoạn hội thoại
             dialogPannel.SetActive(true);  
             if (PlayerPrefs.GetInt("QuantityItem")>1 && PlayerPrefs.GetInt("QuantityItem") < 150) {
-                message.text = $"So luong avat pham : {PlayerPrefs.GetInt("QuantityItem")}/150";
+                message.text = $"So luong vat pham : {PlayerPrefs.GetInt("QuantityItem")}/150";
 
             }
             else
