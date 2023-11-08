@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7078067867008398006}
   - component: {fileID: 8769557806534394546}
   - component: {fileID: 1729370082710160742}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ring
   m_TagString: Treasure
   m_Icon: {fileID: 0}

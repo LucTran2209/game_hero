@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4170798301817521647}
   - component: {fileID: 781401525523009239}
   - component: {fileID: 1719691555090968818}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SwordItem
   m_TagString: Treasure
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4165086724200593266}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -30.69, y: 0.98, z: 0.06893216}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

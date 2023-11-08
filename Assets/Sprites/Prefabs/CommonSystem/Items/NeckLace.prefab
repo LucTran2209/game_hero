@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2001125556924779027}
   - component: {fileID: 6619827617063889530}
   - component: {fileID: 5040807905260610346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NeckLace
   m_TagString: Treasure
   m_Icon: {fileID: 0}
