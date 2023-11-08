@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1528144910401383727}
   - component: {fileID: 6655821754676270445}
   - component: {fileID: 1350534188361873949}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shoes
   m_TagString: Treasure
   m_Icon: {fileID: 0}
