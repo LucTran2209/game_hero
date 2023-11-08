@@ -1908,7 +1908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016cbcbbf26e91947b84f2ac961936e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 01fe9035f15be5348b45de375b10f40b, type: 2}
+  audioMixer: {fileID: 24100000, guid: e677476651bafbd438f2cd5bb526500c, type: 2}
   musicSlider: {fileID: 409123443}
 --- !u!82 &617583814
 AudioSource:
