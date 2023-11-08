@@ -64,7 +64,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 7.048279, y: 0.62336636}
+  m_Offset: {x: 1.8185387, y: 1.6573634}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.948124, y: 8.346472}
+  m_Size: {x: 32.644127, y: 9.807654}
   m_EdgeRadius: 0
 --- !u!1 &985831513562977956
 GameObject:
@@ -782,6 +782,7 @@ GameObject:
   - component: {fileID: 6749533800363244431}
   - component: {fileID: 8831585242942140072}
   - component: {fileID: 2144819834691831474}
+  - component: {fileID: 2783550692644683865}
   m_Layer: 6
   m_Name: Final_Boss
   m_TagString: Monster
@@ -909,7 +910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Attack: 300
   Ammor: 150
-  Health: 8000
+  Health: 1000
   bloodSlider: {fileID: 1818929645892146404}
   item1: {fileID: 0}
   item2: {fileID: 0}
@@ -927,7 +928,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8252276044490427745}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e2caeb0c6ecaae4f91516ede912fb6d, type: 3}
   m_Name: 
@@ -958,6 +959,20 @@ MonoBehaviour:
   castTimer: 12
   castDistance: 9
   castPosition: {fileID: 2164950358184990597}
+--- !u!114 &2783550692644683865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8252276044490427745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6351086f82d95a542a9c07356f6dd5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelWinner: {fileID: 0}
+  audioWinner: {fileID: 0}
 --- !u!1 &9204132895636255999
 GameObject:
   m_ObjectHideFlags: 0

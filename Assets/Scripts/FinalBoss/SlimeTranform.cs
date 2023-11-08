@@ -22,6 +22,10 @@ public class SlimeTranform : MonoBehaviour
         animatorBoss = boss.GetComponent<Animator>();
         bossBehavior = boss.GetComponent<BossBehavior>();
         attributeManager = boss.GetComponent<AttributeManager>();
+        foreach (GameObject originalFly in fly)
+        {
+            originalFly.transform.localScale = Vector3.one;
+        }
     }
 
     void Update()
@@ -45,6 +49,7 @@ public class SlimeTranform : MonoBehaviour
                 GameObject newFly = Instantiate(originalFly, originalFly.transform.position, originalFly.transform.rotation);
             }
         }
+
     }
 
     private bool checkSlime()
