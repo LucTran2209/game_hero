@@ -17,12 +17,13 @@ public class DialogFinal : MonoBehaviour
             // Khi người chơi vào khoảng cách gần với vật thể, cho phép hiển thị đoạn hội thoại
             dialogPannel.SetActive(true);  
             if (PlayerPrefs.GetInt("QuantityItem")>1 && PlayerPrefs.GetInt("QuantityItem") < 150) {
-                message.text = $"So luong vat pham : {PlayerPrefs.GetInt("QuantityItem")}/150";
+                message.text = $"Tôi biết anh vội vàng cứu Trái Đất nhưng mà anh chưa thể rời đi được " +
+                    $"Anh mới chỉ có  : {PlayerPrefs.GetInt("QuantityItem")}/150 vật phẩm thôi";
 
             }
             else
             {
-                message.text = $"Vay la ban da nhan du vat pham roi !";
+                message.text = $"Hoàn thành rồi có vẻ không khó khăn lắm nhỉ !!!";
                 StartCoroutine(LoadTotalMapAfterDelay(3f));
             }
         }
