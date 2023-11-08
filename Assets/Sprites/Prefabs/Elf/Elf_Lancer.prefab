@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9016401040423092332}
   - component: {fileID: 6156735100433063086}
   - component: {fileID: 4981549087361998504}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: EnemyHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4863884101652679787}
   - component: {fileID: 5459742089235054009}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: HealthSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5879316186809601108}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ScanArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 7509386872632712685}
   - component: {fileID: 6597415990437750497}
   - component: {fileID: 6661306989028013951}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GroundSensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4375561372878619523}
   - component: {fileID: 8665817096032262069}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: TriggerArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.3617313, y: 0.079138756}
+  m_Offset: {x: 5.651832, y: 1.0711925}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -389,7 +389,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.392572, y: 0.08410072}
+  m_Size: {x: 14.580153, y: 4.479276}
   m_EdgeRadius: 0
 --- !u!1 &4256651610300696287
 GameObject:
@@ -401,7 +401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3421488883145754593}
   - component: {fileID: 4914978290602906449}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: EnemySprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -669,7 +669,7 @@ GameObject:
   - component: {fileID: 7954378103023817867}
   - component: {fileID: 716170611697007412}
   - component: {fileID: 1104255303501431348}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -745,7 +745,7 @@ GameObject:
   - component: {fileID: 8268556587240900789}
   - component: {fileID: 3200377790709460803}
   - component: {fileID: 9113559352872817384}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: HealthBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -845,7 +845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7316751155046566933}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +883,7 @@ GameObject:
   - component: {fileID: 8856621065624320195}
   - component: {fileID: 2346698768947761092}
   - component: {fileID: 7453038355855114155}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -956,7 +956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1961927855738309226}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: RayCastGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}

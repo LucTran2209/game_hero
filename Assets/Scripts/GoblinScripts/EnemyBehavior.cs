@@ -72,9 +72,9 @@ public abstract class EnemyBehavior : MonoBehaviour
 			//Set move 
 			Move();
 		}
-		
-/*		//Check path can move?
-		RayCastDeBugger();*/
+
+		//Check path can move?
+		RayCastDeBugger();
 
 		if (!checkPath())
 		{
@@ -277,7 +277,7 @@ public abstract class EnemyBehavior : MonoBehaviour
 	}
 	#endregion
 
-	/*#region Debug tool
+	#region Debug tool
 	private void RayCastDeBugger()
 	{
 		Debug.DrawRay(rayCastGround.position, Vector2.down * rayCastLengt, Color.red);
@@ -292,7 +292,7 @@ public abstract class EnemyBehavior : MonoBehaviour
 		Gizmos.matrix = Matrix4x4.TRS(boxPosition, transform.rotation, boxSize);
 		Gizmos.DrawWireCube(Vector3.zero, Vector3.one);
 	}
-	#endregion*/
+	#endregion
 
 	#region Cooldown
 	private void Cooldown()

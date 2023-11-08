@@ -38,6 +38,7 @@ public class ArcherBehavior : EnemyBehavior
     private void AttackRange()
     {
         AttackMode();
+        Stand();
         animator.SetTrigger("Range");
     }
 

@@ -278,9 +278,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Attack: 100
-  Ammor: 0
-  Health: 500
+  Ammor: 50
+  Health: 1000
   bloodSlider: {fileID: 8367377122203412736}
+  item1: {fileID: 0}
+  item2: {fileID: 0}
+  item3: {fileID: 0}
+  item4: {fileID: 0}
+  item5: {fileID: 0}
+  item6: {fileID: 0}
+  item7: {fileID: 0}
+  item8: {fileID: 0}
+  effect: {fileID: 0}
 --- !u!114 &1928028737672582166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,7 +521,7 @@ GameObject:
   - component: {fileID: 5312719384393719394}
   - component: {fileID: 7178922202604659913}
   - component: {fileID: 3348739074077279634}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DetectionZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

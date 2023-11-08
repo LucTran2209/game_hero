@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1195354684938616004}
   - component: {fileID: 1834239056630265338}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: TriggerArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.2794433, y: 0.43995}
+  m_Offset: {x: 7.048279, y: 0.62336636}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.410454, y: 2.7391605}
+  m_Size: {x: 19.948124, y: 8.346472}
   m_EdgeRadius: 0
 --- !u!1 &985831513562977956
 GameObject:
@@ -86,7 +86,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7724495791375459462}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ScanArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 165701483186793362}
   - component: {fileID: 3334190090145838145}
   - component: {fileID: 2840263417120804291}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: EnemyHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -663,7 +663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7783501894205433823}
   - component: {fileID: 4100455934105396956}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: EnemySprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,9 +908,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Attack: 300
-  Ammor: 0
-  Health: 10000
+  Ammor: 150
+  Health: 8000
   bloodSlider: {fileID: 1818929645892146404}
+  item1: {fileID: 0}
+  item2: {fileID: 0}
+  item3: {fileID: 0}
+  item4: {fileID: 0}
+  item5: {fileID: 0}
+  item6: {fileID: 0}
+  item7: {fileID: 0}
+  item8: {fileID: 0}
+  effect: {fileID: 0}
 --- !u!114 &2144819834691831474
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9018004160094059230}
   - component: {fileID: 2526013397390496658}
   - component: {fileID: 8926435812042513553}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PowerBall
   m_TagString: PowerBall
   m_Icon: {fileID: 0}
@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f1346b7f4ff3244991a46048472365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingEffect: {fileID: 0}
   aliveTime: 2
 --- !u!95 &8926435812042513553
 Animator:

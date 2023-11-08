@@ -277,10 +277,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f3cd1cb348a2a4fbac8e28535c978a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack: 100
-  Ammor: 0
-  Health: 500
+  Attack: 120
+  Ammor: 50
+  Health: 1000
   bloodSlider: {fileID: 8367377122203412736}
+  item1: {fileID: 0}
+  item2: {fileID: 0}
+  item3: {fileID: 0}
+  item4: {fileID: 0}
+  item5: {fileID: 0}
+  item6: {fileID: 0}
+  item7: {fileID: 0}
+  item8: {fileID: 0}
+  effect: {fileID: 0}
 --- !u!95 &6354138858481755089
 Animator:
   serializedVersion: 5
@@ -514,7 +523,7 @@ GameObject:
   - component: {fileID: 5312719384393719394}
   - component: {fileID: 7178922202604659913}
   - component: {fileID: 3348739074077279634}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DetectionZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

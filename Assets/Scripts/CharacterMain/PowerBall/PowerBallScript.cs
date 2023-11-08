@@ -32,11 +32,11 @@ public class PowerBallScript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "monster")
+        if (other.gameObject.tag == "Monster")
         {
-            other.GetComponent<AttributeManager>().TakeDmg(damage);
+            other.gameObject.GetComponent<AttributeManager>().TakeDmg(damage);
             Debug.Log("ssssss");
             Destroy(gameObject);
         }
