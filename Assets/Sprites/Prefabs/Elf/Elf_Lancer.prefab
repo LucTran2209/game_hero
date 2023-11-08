@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4863884101652679787}
   - component: {fileID: 5459742089235054009}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HealthSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 7509386872632712685}
   - component: {fileID: 6597415990437750497}
   - component: {fileID: 6661306989028013951}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundSensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.3617313, y: 0.5945185}
+  m_Offset: {x: 2.3617313, y: 0.079138756}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -389,7 +389,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.392572, y: 2.0663314}
+  m_Size: {x: 6.392572, y: 0.08410072}
   m_EdgeRadius: 0
 --- !u!1 &4256651610300696287
 GameObject:
@@ -489,9 +489,9 @@ GameObject:
   - component: {fileID: 4988211795058739578}
   - component: {fileID: 1946435123293611754}
   - component: {fileID: 2230104458227371661}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Elf_Lancer
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -534,6 +534,15 @@ MonoBehaviour:
   Ammor: 20
   Health: 1000
   bloodSlider: {fileID: 5459742089235054009}
+  item1: {fileID: 1263751194853019065, guid: 6c25f567bb747714997b368390984bd3, type: 3}
+  item2: {fileID: 7846441516013633475, guid: 98cb3d615e489304fa6fe8d6cb8c7b61, type: 3}
+  item3: {fileID: 7807538149227597638, guid: a0c42580d72573c4e9dfb093ce534263, type: 3}
+  item4: {fileID: 4620095193232711880, guid: 0e0e24044c5e54b47a48d6467f540840, type: 3}
+  item5: {fileID: 7224801603499244736, guid: 17f8203dd0aa1114ea6dd2c32bf2d21a, type: 3}
+  item6: {fileID: 2202359487632238302, guid: 4092dce54822fc842b0f8372d8e52662, type: 3}
+  item7: {fileID: 3927076103231467252, guid: 744370836f7546d42a4dcb38c404ccd0, type: 3}
+  item8: {fileID: 4165086724200593266, guid: 30ff5bb5a5a38af409b1324531b16e04, type: 3}
+  effect: {fileID: 7512106542484750629, guid: 65860aeaa8bd5aa4db6c2eb5d2015baf, type: 3}
 --- !u!95 &3911442157189460477
 Animator:
   serializedVersion: 5
@@ -599,7 +608,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -660,7 +669,7 @@ GameObject:
   - component: {fileID: 7954378103023817867}
   - component: {fileID: 716170611697007412}
   - component: {fileID: 1104255303501431348}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -736,7 +745,7 @@ GameObject:
   - component: {fileID: 8268556587240900789}
   - component: {fileID: 3200377790709460803}
   - component: {fileID: 9113559352872817384}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HealthBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +770,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.03, y: 0.59}
   m_SizeDelta: {x: 24.2246, y: 16.6385}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8268556587240900789
@@ -836,7 +845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7316751155046566933}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -874,7 +883,7 @@ GameObject:
   - component: {fileID: 8856621065624320195}
   - component: {fileID: 2346698768947761092}
   - component: {fileID: 7453038355855114155}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

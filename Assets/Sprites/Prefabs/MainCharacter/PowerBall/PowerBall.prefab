@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2257888835817729744}
   - component: {fileID: 9018004160094059230}
   - component: {fileID: 2526013397390496658}
+  - component: {fileID: 8926435812042513553}
   m_Layer: 0
   m_Name: PowerBall
   m_TagString: PowerBall
@@ -77,12 +78,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.9150943, g: 0.13381095, b: 0.13381095, a: 1}
+  m_Sprite: {fileID: -1993767393, guid: 2fbdee77d17b8b2458d7d22bd6c934e5, type: 3}
+  m_Color: {r: 0.98589355, g: 0.98645145, b: 0.990566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.84, y: 0.09}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -147,9 +148,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 3.5164285, y: -0.0436065}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.470929
 --- !u!114 &9018004160094059230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,3 +178,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aliveTime: 2
+--- !u!95 &8926435812042513553
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4132640507443198682}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3dd228ac113579f43ab0794d7c58191a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

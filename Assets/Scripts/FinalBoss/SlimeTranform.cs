@@ -43,7 +43,6 @@ public class SlimeTranform : MonoBehaviour
             foreach (GameObject originalFly in fly)
             {
                 GameObject newFly = Instantiate(originalFly, originalFly.transform.position, originalFly.transform.rotation);
-
             }
         }
     }

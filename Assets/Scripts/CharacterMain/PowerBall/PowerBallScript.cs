@@ -11,12 +11,12 @@ public class PowerBallScript : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        if (transform.localPosition.z > 0)
-        {
-            rb.AddForce(new Vector2(-1, 0) * bulletSpeed, ForceMode2D.Impulse);
-        }else
+        if (transform.position.z == 0)
         {
             rb.AddForce(new Vector2(1, 0) * bulletSpeed, ForceMode2D.Impulse);
+        }else
+        {
+            rb.AddForce(new Vector2(-1, 0) * bulletSpeed, ForceMode2D.Impulse);
         }
         
     }

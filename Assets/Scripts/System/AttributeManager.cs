@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.CharacterMain.PowerBall;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -31,7 +32,23 @@ public class AttributeManager : MonoBehaviour
 	private int hitCount = 0;
 	private int hitMax = 3;
 	private bool death;
+    #endregion
+
+    #region
+    private Vector3 currentPos;
+    public GameObject item1;
+	public GameObject item2;
+	public GameObject item3;
+	public GameObject item4;
+	public GameObject item5;
+	public GameObject item6;
+	public GameObject item7;
+	public GameObject item8;
+	private List<GameObject> listItems;
+	public GameObject effect;
 	#endregion
+
+	
 
     public float GetMaxHealth()
 	{
@@ -48,9 +65,27 @@ public class AttributeManager : MonoBehaviour
 		rigidbody2d = GetComponent<Rigidbody2D>();
 	}
 
-	// Update is called once per frame
-	void Update()
+    // Start
+    private void Start()
     {
+        listItems = new List<GameObject>
+        {
+            item1,
+            item2,
+            item3,
+            item4,
+            item5,
+            item6,
+            item7,
+            item8
+        };
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+		currentPos = transform.position;
+
         bloodSlider.value = Health;
         if (isHit)
 		{
@@ -76,9 +111,14 @@ public class AttributeManager : MonoBehaviour
 		{
 			//Death
 			animator.SetTrigger("Death");
-			rigidbody2d.gravityScale = 1;
-			death = true;
-			Destroy(gameObject, 3f);
+			rigidbody2d.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+            colider2d.isTrigger = true;
+            rigidbody2d.gravityScale = 1;
+            StartCoroutine(SpawnItemWithDelay(1.9f));
+            death = true;
+			//gameObject.SetActive(false);
+			Destroy(gameObject, 2f);
+
 		}
 
 		if (Health > 0 && !isResistance)
@@ -95,7 +135,15 @@ public class AttributeManager : MonoBehaviour
 		}
 	}
 
-	private void OnTriggerEnter2D(Collider2D trig)
+    IEnumerator SpawnItemWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        int randomIndex = Random.Range(0, listItems.Count); // Chọn một chỉ mục ngẫu nhiên
+		Instantiate(listItems[randomIndex], currentPos, Quaternion.identity);
+    }
+
+    private void OnTriggerEnter2D(Collider2D trig)
 	{
 		if (trig.tag != "Ground" && death) 
 		{
@@ -103,8 +151,10 @@ public class AttributeManager : MonoBehaviour
 		}
 		if (trig.tag == "PowerBall")
 		{
-			TakeDmg(100);
+			TakeDmg(500);
+			//trig.GetComponent<AutoDestroy>().AppearEffect();
 			trig.gameObject.SetActive(false);
+			Instantiate(effect, currentPos, Quaternion.identity);
 		}
 	}
 
