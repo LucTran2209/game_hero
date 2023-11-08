@@ -12703,8 +12703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56185ef180c5a1d4bb32855821851c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
-  btn_close: {fileID: 0}
+  panel: {fileID: 1780882575}
+  btn_close: {fileID: 1653062885}
 --- !u!4 &1008319762 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4978123353533991645, guid: c07e9c2cb1b553a46896650c0219f9f0, type: 3}
@@ -53629,7 +53629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1780882576
 RectTransform:
   m_ObjectHideFlags: 0
