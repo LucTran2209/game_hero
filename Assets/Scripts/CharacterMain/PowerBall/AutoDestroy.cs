@@ -13,6 +13,8 @@ namespace Assets.Scripts.CharacterMain.PowerBall
 
         public float aliveTime;
 
+        public float dmg;
+
         private void Start()
         {
             DestroyBullet(aliveTime);
@@ -32,7 +34,7 @@ namespace Assets.Scripts.CharacterMain.PowerBall
                 var enemy = collision.GetComponent<AttributeManager>();
                 if (enemy != null)
                 {
-                    enemy.TakeDmg(500f);
+                    enemy.TakeDmg(dmg);
                 }
             }
         }

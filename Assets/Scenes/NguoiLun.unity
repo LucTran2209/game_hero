@@ -14368,7 +14368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1114239146
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51801,7 +51801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogPannel: {fileID: 111858009}
   message: {fileID: 612095419}
-  winnerCondition: {fileID: 0}
+  winnerCondition: {fileID: 1372049094}
 --- !u!114 &1372049094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56828,7 +56828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1937071169
 RectTransform:
   m_ObjectHideFlags: 0

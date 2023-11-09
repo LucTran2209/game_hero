@@ -2,6 +2,7 @@
 using System.Collections;
 using System;
 using Assets.Scripts.CharacterMain;
+using Assets.Scripts.CharacterMain.PowerBall;
 
 namespace Assets.Scripts
 {
@@ -40,7 +41,7 @@ namespace Assets.Scripts
 
         public Transform attackStartPosition;
         public GameObject powerBall;
-        float fireRate = 0.5f;
+        float fireRate = 1f;
         float nextFire = 0;
 
         // Use this for initialization
@@ -50,6 +51,7 @@ namespace Assets.Scripts
             m_speed = PlayerPrefs.GetFloat(Key.Speed);
             m_jumpForce = PlayerPrefs.GetFloat(Key.Jump);
             m_rollForce = m_speed * 1.5f;
+            powerBall.GetComponent<AutoDestroy>().dmg = PlayerPrefs.GetFloat(Key.AtkPoint) * 1.5f;
         }
 
 		private void Start()
