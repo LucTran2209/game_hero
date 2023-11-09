@@ -12,6 +12,8 @@ TagManager:
   - MovingPlatform
   - PowerBall
   - Treasure
+  - Coin
+  - NPCEnd
   layers:
   - Default
   - TransparentFX

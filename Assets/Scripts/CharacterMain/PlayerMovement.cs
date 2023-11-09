@@ -2,13 +2,16 @@
 using System.Collections;
 using System;
 using Assets.Scripts.CharacterMain;
+using UnityEngine.UI;
+using TMPro;
 
 namespace Assets.Scripts
 {
     public class PlayerMovement : MonoBehaviour
     {
 
-
+        public TextMeshProUGUI textCoins;
+        
         [SerializeField] float m_speed = 4.0f;
         [SerializeField] public float m_jumpForce = 7.5f;
         [SerializeField] float m_rollForce = 6.0f;
@@ -55,7 +58,9 @@ namespace Assets.Scripts
 		private void Start()
 		{
 			PlayerPrefs.SetInt("QuantityItem", 0);
-		}
+            PlayerPrefs.SetInt("QuantityCoin", 0);
+
+        }
 
 		// Update is called once per frame
 		void Update()
@@ -242,11 +247,18 @@ namespace Assets.Scripts
             {
                 audioPlayerGetTreasure.Play();
             }
+            if (other.tag == "Coin")
+            {
+                PlayerPrefs.SetInt("QuantityCoin", PlayerPrefs.GetInt("QuantityCoin") + 1);
+                textCoins.text = "Coins: " + PlayerPrefs.GetInt("QuantityCoin").ToString();
+                audioPlayerGetItem.Play();
+            }
+
         }
 
         public void StopMove()
         {
-            Debug.Log("Stop move");
+            //Debug.Log("Stop move");
             m_body2d.velocity = Vector2.zero;
         }
 

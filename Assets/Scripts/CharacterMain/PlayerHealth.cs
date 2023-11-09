@@ -100,7 +100,7 @@ public class PlayerHealth : MonoBehaviour
 	private void DecreaseHP(float dmg)
 	{
 		current_health = Mathf.Clamp(current_health - dmg, 0, max_health);
-		Debug.Log("after decrease hp: " + current_health);
+		//Debug.Log("after decrease hp: " + current_health);
 
 		PlayerPrefs.SetFloat(Key.PlayerCurrentHealth, current_health);
 		if (current_health <= 0)
@@ -120,7 +120,7 @@ public class PlayerHealth : MonoBehaviour
 			audioPlayerHurt.Play();
 
 			//Hit
-			Debug.Log("Hit");
+			//Debug.Log("Hit");
 			m_animator.SetTrigger("Hit");
 
 			//reset Hit duration
@@ -130,7 +130,7 @@ public class PlayerHealth : MonoBehaviour
 
 	private void Deadth(float timedelay)
 	{
-		Debug.Log("Dead");
+		//Debug.Log("Dead");
 		audioPlayerDead.Play();
 		// set animation Deadth      
 		// GetComponent<Collider2D>().isTrigger = true;

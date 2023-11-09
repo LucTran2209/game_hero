@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 1217698450010971631}
   - component: {fileID: 6653643938313031405}
   - component: {fileID: 4482904693341930141}
-  - component: {fileID: 4854339774558784970}
+  - component: {fileID: 7520814407706075031}
   m_Layer: 0
   m_Name: Ruby
-  m_TagString: ItemHealth
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,7 +143,7 @@ CircleCollider2D:
   m_Offset: {x: -0.014499664, y: 0.00000035762787}
   serializedVersion: 2
   m_Radius: 0.38400018
---- !u!114 &4854339774558784970
+--- !u!114 &7520814407706075031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,6 +152,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2690982925772252519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61e154c91d29ff94384674807a48a1b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 435719dc40fbe7c44823b0c2d8809dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

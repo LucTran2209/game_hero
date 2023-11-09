@@ -26,8 +26,6 @@ public class ItemIdle : MonoBehaviour
 			
 			count++;
 			PlayerPrefs.SetInt("QuantityItem", count);
-			
-			Debug.Log(PlayerPrefs.GetInt("QuantityItem"));
 			gameObject.SetActive(false);
 		}
 	}
