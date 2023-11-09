@@ -9,6 +9,7 @@ public class DialogFinal : MonoBehaviour
 {
     public GameObject dialogPannel;
     public TextMeshProUGUI message;
+    public WinnerCondition winnerCondition;
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,7 +24,7 @@ public class DialogFinal : MonoBehaviour
             else
             {
                 message.text = $"Vay la ban da nhan du vat pham roi !";
-                StartCoroutine(LoadTotalMapAfterDelay(3f));
+                winnerCondition.Winner1(2);
             }
         }
     }

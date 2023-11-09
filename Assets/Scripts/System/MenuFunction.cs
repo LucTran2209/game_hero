@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.CharacterMain;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuFunction : MonoBehaviour

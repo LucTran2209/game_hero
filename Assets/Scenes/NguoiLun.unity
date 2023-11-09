@@ -649,7 +649,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eff728e326ffe4048a0229945bb65dc9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9f6d1ac835125f84382a431ec4996db8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2184,6 +2184,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b82ce54a87aafd4c94826e438c62af0, type: 3}
+--- !u!82 &227212193 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5284465474625315679, guid: 2b82ce54a87aafd4c94826e438c62af0, type: 3}
+  m_PrefabInstance: {fileID: 227212192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &227633560
 GameObject:
   m_ObjectHideFlags: 0
@@ -14363,7 +14368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1114239146
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14403,9 +14408,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Nh\u1EADn \u0111\u01B0\u1EE3c k\u1EF9 n\u0103ng \u0111\xE1nh xa Li\u1EC7t
-    Tr\u1EA3m k\xEDch\n- Ph\u1EA1m vi c\xF4ng k\xEDch 10m\n- S\xE1t th\u01B0\u01A1ng:
-    200\n- Nh\u1EA5n K \u0111\u1EC3 k\xEDch ho\u1EA1t"
+  m_text: "- Nh\u1EADn gi\xE0y c\u1EE7a ng\u01B0\u1EDDi l\xF9n\n- Nh\u1EA3y + 2\n-
+    Ch\u1EA1y + 2"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -51663,6 +51667,7 @@ GameObject:
   - component: {fileID: 1372049091}
   - component: {fileID: 1372049090}
   - component: {fileID: 1372049093}
+  - component: {fileID: 1372049094}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -51796,6 +51801,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogPannel: {fileID: 111858009}
   message: {fileID: 612095419}
+  winnerCondition: {fileID: 0}
+--- !u!114 &1372049094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372049089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6351086f82d95a542a9c07356f6dd5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelWinner: {fileID: 1937071168}
+  audioWinner: {fileID: 227212193}
 --- !u!1001 &1374037226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56808,7 +56828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1937071169
 RectTransform:
   m_ObjectHideFlags: 0

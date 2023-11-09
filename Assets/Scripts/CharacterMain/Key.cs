@@ -32,5 +32,22 @@ namespace Assets.Scripts.CharacterMain
         /// Đánh bại từ trưởng goblin nhận được sách kỹ năng đánh xa
         /// </summary>
         public const string Skill4 = "Skill4";
+
+        public const string PlayerHealth = "PlayerHealth";
+
+        public const string AtkPoint = "AtkPoint";
+
+        public const string Speed = "Speed";
+        
+        public const string Jump = "Jump";
+
+
+        public const string NguoiLun = "NguoiLun";
+
+        public const string Goblin = "Goblin";
+
+        public const string Elf = "Elf";
+
+        public const string Boss = "Boss";
     }
 }

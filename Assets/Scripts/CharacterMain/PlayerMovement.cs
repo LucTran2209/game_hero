@@ -47,6 +47,9 @@ namespace Assets.Scripts
         void Awake()
         {            
             PlayerPrefs.SetInt("QuantityItem", 0);
+            m_speed = PlayerPrefs.GetFloat(Key.Speed);
+            m_jumpForce = PlayerPrefs.GetFloat(Key.Jump);
+            m_rollForce = m_speed * 1.5f;
         }
 
 		private void Start()

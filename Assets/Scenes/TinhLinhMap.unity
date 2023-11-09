@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eff728e326ffe4048a0229945bb65dc9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 994287211fc306b429d36ce30f53110a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -45283,13 +45283,13 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 264743150847120245, guid: d06d06c6130a62d4ea47675eafc364bc, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1510951447}
+    - targetCorrespondingSourceObject: {fileID: 264743150847120245, guid: d06d06c6130a62d4ea47675eafc364bc, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1831544435}
     - targetCorrespondingSourceObject: {fileID: 264743150847120245, guid: d06d06c6130a62d4ea47675eafc364bc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1342024985}
-    - targetCorrespondingSourceObject: {fileID: 264743150847120245, guid: d06d06c6130a62d4ea47675eafc364bc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1510951447}
     - targetCorrespondingSourceObject: {fileID: 5505431536750642331, guid: d06d06c6130a62d4ea47675eafc364bc, type: 3}
       insertIndex: 0
       addedObject: {fileID: 56356197}
@@ -49718,12 +49718,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Nh\u1EADn \u0111\u01B0\u1EE3c k\u1EF9 n\u0103ng \u0111\xE1nh xa Li\u1EC7t
-    Tr\u1EA3m k\xEDch\n- Ph\u1EA1m vi c\xF4ng k\xEDch 10m\n- S\xE1t th\u01B0\u01A1ng:
-    200\n- Nh\u1EA5n K \u0111\u1EC3 k\xEDch ho\u1EA1t"
+  m_text: "- Nh\u1EADn ch\xFAc ph\xFAc tinh linh\n- S\xE1t th\u01B0\u01A1ng t\u0103ng
+    200%\n- M\xE1u t\u0103ng 200%"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2920a9cc59f3879448da5fa72229a8d6, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2920a9cc59f3879448da5fa72229a8d6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

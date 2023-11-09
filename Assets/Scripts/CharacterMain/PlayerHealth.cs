@@ -8,8 +8,8 @@ using Assets.Scripts;
 public class PlayerHealth : MonoBehaviour
 {
 	// Khai báo máu 
-	[SerializeField] float max_health;
-	private float current_health;
+	[SerializeField] private float current_health;
+	private float max_health;
 
 
 	// Khai báo biên UI
@@ -43,8 +43,8 @@ public class PlayerHealth : MonoBehaviour
 	// Start is called before the first frame update
 	void Awake()
 	{
-		current_health = max_health;
-		m_animator = GetComponent<Animator>();
+
+        m_animator = GetComponent<Animator>();
 		m_collider = GetComponent<Collider2D>();
 		m_rigidbody = GetComponent<Rigidbody2D>();
 	}
@@ -52,19 +52,17 @@ public class PlayerHealth : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		PlayerPrefs.SetFloat(Key.PlayerMaxHealth, max_health);
-		PlayerPrefs.SetFloat(Key.PlayerCurrentHealth, max_health);
-		current_health = max_health;
-		playerHealthSlider.maxValue = max_health;
-		playerHealthSlider.value = max_health;
-	}
+        max_health = PlayerPrefs.GetFloat(Key.PlayerHealth); ;
+        current_health = max_health;
+        playerHealthSlider.maxValue = max_health;
+        playerHealthSlider.value = max_health;
+    }
 
 	// Update is called once per frame
 	void Update()
 	{
-		playerHealthSlider.value = PlayerPrefs.GetFloat(Key.PlayerCurrentHealth);
-		current_health = PlayerPrefs.GetFloat(Key.PlayerCurrentHealth);
-		txtBlood.text = $"{(int)PlayerPrefs.GetFloat(Key.PlayerCurrentHealth) / PlayerPrefs.GetFloat(Key.PlayerMaxHealth) * 100}%";
+		playerHealthSlider.value = current_health;
+		txtBlood.text = $"{(int)current_health / max_health * 100}%";
 
 		if (death)
 		{
