@@ -52,7 +52,7 @@ public class Setting : MonoBehaviour
     public void LoadMapAgain()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     // Load lại scene nguoi lun

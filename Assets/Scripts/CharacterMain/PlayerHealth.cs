@@ -105,7 +105,7 @@ public class PlayerHealth : MonoBehaviour
 		PlayerPrefs.SetFloat(Key.PlayerCurrentHealth, current_health);
 		if (current_health <= 0)
 		{
-			Deadth();
+			Deadth(2f);
 			return;
 		}
 
@@ -128,7 +128,7 @@ public class PlayerHealth : MonoBehaviour
 		}
 	}
 
-	private void Deadth()
+	private void Deadth(float timedelay)
 	{
 		Debug.Log("Dead");
 		audioPlayerDead.Play();
@@ -139,7 +139,7 @@ public class PlayerHealth : MonoBehaviour
 		m_animator.SetTrigger("Dead");
 		death = true;
 		GetComponent<PlayerMovement>().StopMove();
-		StartCoroutine(Endgame(2f));
+		StartCoroutine(Endgame(timedelay));
 	}
 
 	private void IncreaseHit()
@@ -218,6 +218,6 @@ public class PlayerHealth : MonoBehaviour
 	// Player dead when fall
 	public void DeadWhenFall()
 	{
-		this.Deadth();
+		this.Deadth(0.5f);
 	}
 }
