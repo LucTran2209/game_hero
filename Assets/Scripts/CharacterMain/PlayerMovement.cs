@@ -3,6 +3,7 @@ using System.Collections;
 using System;
 using Assets.Scripts.CharacterMain;
 using Assets.Scripts.CharacterMain.PowerBall;
+using TMPro;
 
 namespace Assets.Scripts
 {
@@ -61,13 +62,8 @@ namespace Assets.Scripts
             m_body2d = GetComponent<Rigidbody2D>();
             m_groundSensor = transform.Find("GroundSensor").GetComponent<SensorPlayer>();
             m_playeHealth = GetComponent<PlayerHealth>();
-        }
-
-		private void Start()
-		{
-			PlayerPrefs.SetInt("QuantityItem", 0);
+            PlayerPrefs.SetInt("QuantityItem", 0);
             PlayerPrefs.SetInt("QuantityCoin", 0);
-
         }
 
 		// Update is called once per frame
