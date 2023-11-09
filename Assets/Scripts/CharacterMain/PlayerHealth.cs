@@ -26,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
 	private Collider2D m_collider;
 	private float dmgTake = 0f;
 	private float dmgScale = 1f;
+	public float dmgMax = 1f;
 
 	private bool isResistance; // Kháng gián đoạn
 	private float resistanceDuration = 0f;
@@ -90,7 +91,7 @@ public class PlayerHealth : MonoBehaviour
 	public void TakeDmg(float dmg)
 	{
 		Debug.Log("Take dame: " + dmg);
-		dmgTake = dmgScale * dmg;
+		dmgTake = dmgScale * dmg * dmgMax;
 		if (dmgTake > 0 && !death)
 		{
 			DecreaseHP(dmgTake);
@@ -109,7 +110,11 @@ public class PlayerHealth : MonoBehaviour
 			return;
 		}
 
-		if (current_health > 0 && !isResistance)
+		if (current_health > 0
+			&& !isResistance 
+			&& !m_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle Block")
+            && !m_animator.GetCurrentAnimatorStateInfo(0).IsName("Block"))
+
 		{
 			if (isHit && hitDuration < 2f)
 			{

@@ -35,20 +35,7 @@ public class SlimeTranform : MonoBehaviour
         {
             OpenWall();
         }
-        if (!checkSlime())
-        {
-            bossBehavior.enabled = true;
-            attributeManager.enabled = true;
-        }
-
-        if (enemies.Count == 1 && timeInt <= 0)
-        {
-            timeInt = 30f;
-            foreach (GameObject originalFly in fly)
-            {
-                GameObject newFly = Instantiate(originalFly, originalFly.transform.position, originalFly.transform.rotation);
-            }
-        }
+        
 
     }
 
@@ -68,7 +55,10 @@ public class SlimeTranform : MonoBehaviour
 
             if (collision.tag == "Player")
             {
-                Wall.SetActive(true);
+
+                bossBehavior.enabled = true;
+                attributeManager.enabled = true;
+            Wall.SetActive(true);
                 animatorBoss.SetBool("Tranform", true);
             }
             if (collision.tag == "Monster")

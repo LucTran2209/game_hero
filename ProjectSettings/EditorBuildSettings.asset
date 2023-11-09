@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TotalMap.unity
     guid: d34e06c264793ec4aa912c775265491f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WolfMap.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/NguoiLun.unity
     guid: 8de3f91f5e0e28248a31290ae130926d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BearMap.unity
     guid: bdd0f7e31ad6e9f4e856971a57ae621f
   - enabled: 1
@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TinhLinhMap.unity
     guid: 9157e6f2166920f418fedbe845d44fe8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DragonMap.unity
     guid: d2698d8d260ab704b9677794aaf54e16
   - enabled: 1

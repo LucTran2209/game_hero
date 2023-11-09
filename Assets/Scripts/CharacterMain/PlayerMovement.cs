@@ -45,17 +45,17 @@ namespace Assets.Scripts
 
         // Use this for initialization
         void Awake()
-        {
+        {            
+            PlayerPrefs.SetInt("QuantityItem", 0);
+        }
+
+		private void Start()
+		{
             m_animator = GetComponent<Animator>();
             m_body2d = GetComponent<Rigidbody2D>();
             m_groundSensor = transform.Find("GroundSensor").GetComponent<SensorPlayer>();
             m_playeHealth = GetComponent<PlayerHealth>();
         }
-
-		private void Start()
-		{
-			PlayerPrefs.SetInt("QuantityItem", 0);
-		}
 
 		// Update is called once per frame
 		void Update()
@@ -142,13 +142,13 @@ namespace Assets.Scripts
                 FirePowerBall();
             }else
             // Block
-            if (Input.GetMouseButtonDown(1) && !m_isRolling)
+            if (Input.GetKeyDown(KeyCode.O) && !m_isRolling)
             {
                 m_animator.SetTrigger("Block");
                 m_animator.SetBool("IdleBlock", true);
             }
 
-            else if (Input.GetMouseButtonUp(1))
+            else if (Input.GetKeyUp(KeyCode.O))
                 m_animator.SetBool("IdleBlock", false);
 
             // Roll

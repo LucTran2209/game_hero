@@ -8,24 +8,16 @@ public class WinnerCondition : MonoBehaviour
     [SerializeField] GameObject panelWinner;
     [SerializeField] AudioSource audioWinner;
 
-    // Update is called once per frame
-    void Update()
-    {
-        AttributeManager health = GetComponent<AttributeManager>();
-        if (health.IsDeadth())
-        {                   
-            StartCoroutine(Winner(2f));
-            PlayerPrefs.SetInt(Key.Skill4, 1);
-        }
-        
-    }
-
-    IEnumerator Winner (float time)
-    {
-        
-        yield return new WaitForSeconds(time);
+    public void Winner1(int mapwinner)
+    {       
         audioWinner.Play();
         panelWinner.SetActive(true);
         Time.timeScale = 0f;
+        PlayerPrefs.SetInt(Key.Skill4, 1);
+        if (true)
+        {
+            PlayerPrefs.SetInt("map", 1);
+        }
+        
     }
 }

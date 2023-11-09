@@ -10,7 +10,7 @@ public class MenuFunction : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(1);
-        
+
     }
 
     //  Player click button Quit
@@ -30,14 +30,14 @@ public class MenuFunction : MonoBehaviour
     public void LoadDragonMap()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene(5);
     }
 
     // Player click choose Elf map
     public void LoadElfMap()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(4);
     }
 
     // Player click choose angel map
@@ -51,14 +51,14 @@ public class MenuFunction : MonoBehaviour
     public void LoadDwarfMap()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 
     // Player click choose goblin map
     public void LoadGoblinMap()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(3);
     }
 
     // Active panel confirm Quit

@@ -77,9 +77,9 @@ GameObject:
   - component: {fileID: 9084496601827806082}
   - component: {fileID: 3767239538747105539}
   - component: {fileID: 3457238756409081775}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Spawnarea 1
-  m_TagString: Monster
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5421645343688544732}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0012350279, y: -0, z: -0, w: 0.9999992}
+  m_LocalRotation: {x: -0.0012392434, y: 0, z: 0, w: 0.9999992}
   m_LocalPosition: {x: 106.56, y: 3.4, z: 1469.8}
   m_LocalScale: {x: 20.708925, y: 11.203476, z: 11.203476}
   m_ConstrainProportionsScale: 0
