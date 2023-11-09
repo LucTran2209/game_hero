@@ -476,7 +476,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1950152056}
         m_TargetAssemblyTypeName: MenuFunction, Assembly-CSharp
         m_MethodName: LoadGoblinMap
         m_Mode: 1
@@ -1532,6 +1532,11 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &488601645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7723464678436933381, guid: d06d06c6130a62d4ea47675eafc364bc, type: 3}
+  m_PrefabInstance: {fileID: 1814383941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &502390663
 GameObject:
   m_ObjectHideFlags: 0
@@ -4094,7 +4099,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1950152056}
         m_TargetAssemblyTypeName: MenuFunction, Assembly-CSharp
         m_MethodName: LoadDragonMap
         m_Mode: 1
@@ -4227,7 +4232,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1950152056}
         m_TargetAssemblyTypeName: MenuFunction, Assembly-CSharp
         m_MethodName: LoadDwarfMap
         m_Mode: 1
@@ -4762,7 +4767,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5505431536750642331, guid: d06d06c6130a62d4ea47675eafc364bc, type: 3}
       insertIndex: 1
       addedObject: {fileID: 617583812}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1115552994916435401, guid: d06d06c6130a62d4ea47675eafc364bc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1950152056}
   m_SourcePrefab: {fileID: 100100000, guid: d06d06c6130a62d4ea47675eafc364bc, type: 3}
 --- !u!1 &1857281285
 GameObject:
@@ -5190,6 +5198,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7cc7c0842a8854facfe00054bdca4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1950152056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950152052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bb6062838d44e40af1776872b09a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionPanel: {fileID: 488601645}
 --- !u!1 &1985288699
 GameObject:
   m_ObjectHideFlags: 0
@@ -5273,7 +5294,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1950152056}
         m_TargetAssemblyTypeName: MenuFunction, Assembly-CSharp
         m_MethodName: LoadElfMap
         m_Mode: 1
