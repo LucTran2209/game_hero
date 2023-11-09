@@ -873,7 +873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 5.4
   m_jumpForce: 8
-  m_rollForce: 6
+  m_rollForce: 8
   audioPlayerRun: {fileID: 4664427348180684580}
   audioPlayerJump: {fileID: 7025278839796003363}
   audioPlayerRoll: {fileID: 6663197843505777013}
@@ -940,6 +940,7 @@ MonoBehaviour:
   panelEndGame: {fileID: 0}
   audioPlayerDead: {fileID: 7472313111479427033}
   audioPlayerHurt: {fileID: 3249652127059434112}
+  dmgMax: 1
 --- !u!1 &4721021317710618879
 GameObject:
   m_ObjectHideFlags: 0

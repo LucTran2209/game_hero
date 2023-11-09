@@ -2,8 +2,7 @@
 using System.Collections;
 using System;
 using Assets.Scripts.CharacterMain;
-using UnityEngine.UI;
-using TMPro;
+using Assets.Scripts.CharacterMain.PowerBall;
 
 namespace Assets.Scripts
 {
@@ -43,12 +42,21 @@ namespace Assets.Scripts
 
         public Transform attackStartPosition;
         public GameObject powerBall;
-        float fireRate = 0.5f;
+        float fireRate = 1f;
         float nextFire = 0;
 
         // Use this for initialization
         void Awake()
-        {
+        {            
+            PlayerPrefs.SetInt("QuantityItem", 0);
+            m_speed = PlayerPrefs.GetFloat(Key.Speed);
+            m_jumpForce = PlayerPrefs.GetFloat(Key.Jump);
+            m_rollForce = m_speed * 1.5f;
+            powerBall.GetComponent<AutoDestroy>().dmg = PlayerPrefs.GetFloat(Key.AtkPoint) * 1.5f;
+        }
+
+		private void Start()
+		{
             m_animator = GetComponent<Animator>();
             m_body2d = GetComponent<Rigidbody2D>();
             m_groundSensor = transform.Find("GroundSensor").GetComponent<SensorPlayer>();
@@ -147,13 +155,13 @@ namespace Assets.Scripts
                 FirePowerBall();
             }else
             // Block
-            if (Input.GetMouseButtonDown(1) && !m_isRolling)
+            if (Input.GetKeyDown(KeyCode.O) && !m_isRolling)
             {
                 m_animator.SetTrigger("Block");
                 m_animator.SetBool("IdleBlock", true);
             }
 
-            else if (Input.GetMouseButtonUp(1))
+            else if (Input.GetKeyUp(KeyCode.O))
                 m_animator.SetBool("IdleBlock", false);
 
             // Roll

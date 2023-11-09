@@ -25,6 +25,7 @@ public class PlayerCombat : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+		PlayerDamage = PlayerPrefs.GetFloat(Key.AtkPoint);
     }
 
     // Update is called once per frame

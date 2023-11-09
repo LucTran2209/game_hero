@@ -59,13 +59,13 @@ public class Setting : MonoBehaviour
     public void LoadMapNguoiLun()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 
     // Load lại scene boss
     public void LoadMapBoss()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene(5);
     }
 }

@@ -8,8 +8,8 @@ using Assets.Scripts;
 public class PlayerHealth : MonoBehaviour
 {
 	// Khai báo máu 
-	[SerializeField] float max_health;
-	private float current_health;
+	[SerializeField] private float current_health;
+	private float max_health;
 
 
 	// Khai báo biên UI
@@ -26,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
 	private Collider2D m_collider;
 	private float dmgTake = 0f;
 	private float dmgScale = 1f;
+	public float dmgMax = 1f;
 
 	private bool isResistance; // Kháng gián đoạn
 	private float resistanceDuration = 0f;
@@ -42,8 +43,8 @@ public class PlayerHealth : MonoBehaviour
 	// Start is called before the first frame update
 	void Awake()
 	{
-		current_health = max_health;
-		m_animator = GetComponent<Animator>();
+
+        m_animator = GetComponent<Animator>();
 		m_collider = GetComponent<Collider2D>();
 		m_rigidbody = GetComponent<Rigidbody2D>();
 	}
@@ -51,19 +52,17 @@ public class PlayerHealth : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		PlayerPrefs.SetFloat(Key.PlayerMaxHealth, max_health);
-		PlayerPrefs.SetFloat(Key.PlayerCurrentHealth, max_health);
-		current_health = max_health;
-		playerHealthSlider.maxValue = max_health;
-		playerHealthSlider.value = max_health;
-	}
+        max_health = PlayerPrefs.GetFloat(Key.PlayerHealth); ;
+        current_health = max_health;
+        playerHealthSlider.maxValue = max_health;
+        playerHealthSlider.value = max_health;
+    }
 
 	// Update is called once per frame
 	void Update()
 	{
-		playerHealthSlider.value = PlayerPrefs.GetFloat(Key.PlayerCurrentHealth);
-		current_health = PlayerPrefs.GetFloat(Key.PlayerCurrentHealth);
-		txtBlood.text = $"{(int)PlayerPrefs.GetFloat(Key.PlayerCurrentHealth) / PlayerPrefs.GetFloat(Key.PlayerMaxHealth) * 100}%";
+		playerHealthSlider.value = current_health;
+		txtBlood.text = $"{(int)current_health / max_health * 100}%";
 
 		if (death)
 		{
@@ -90,7 +89,7 @@ public class PlayerHealth : MonoBehaviour
 	public void TakeDmg(float dmg)
 	{
 		Debug.Log("Take dame: " + dmg);
-		dmgTake = dmgScale * dmg;
+		dmgTake = dmgScale * dmg * dmgMax;
 		if (dmgTake > 0 && !death)
 		{
 			DecreaseHP(dmgTake);
@@ -109,7 +108,11 @@ public class PlayerHealth : MonoBehaviour
 			return;
 		}
 
-		if (current_health > 0 && !isResistance)
+		if (current_health > 0
+			&& !isResistance 
+			&& !m_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle Block")
+            && !m_animator.GetCurrentAnimatorStateInfo(0).IsName("Block"))
+
 		{
 			if (isHit && hitDuration < 2f)
 			{
