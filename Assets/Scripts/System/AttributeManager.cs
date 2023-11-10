@@ -114,7 +114,7 @@ public class AttributeManager : MonoBehaviour
     public void TakeDmg(float damage)
     {
         Health = Mathf.Clamp(Health - (damage - Ammor / 100 * damage) * (100 - damageRessitance) / 100, 0, maxHealth);
-        if (Health <= 0)
+        if (Health <= 0 && !death)
         {
             //Death
             animator.SetTrigger("Death");

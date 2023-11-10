@@ -12,15 +12,7 @@ public class ItemHealthScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (PlayerPrefs.GetFloat(Key.PlayerCurrentHealth) < PlayerPrefs.GetFloat(Key.PlayerMaxHealth))
-            {
-                PlayerPrefs.SetFloat(Key.PlayerCurrentHealth, PlayerPrefs.GetFloat(Key.PlayerCurrentHealth) + 50f);
-
-            } else
-            {
-                PlayerPrefs.SetFloat(Key.PlayerCurrentHealth, PlayerPrefs.GetFloat(Key.PlayerCurrentHealth) + 0f);
-            }
-            
+            PlayerPrefs.SetFloat(Key.PlayerCurrentHealth, Mathf.Clamp(PlayerPrefs.GetFloat(Key.PlayerHealth) + 200f, 0, PlayerPrefs.GetFloat(Key.PlayerHealth)));
             gameObject.SetActive(false);
         }
 

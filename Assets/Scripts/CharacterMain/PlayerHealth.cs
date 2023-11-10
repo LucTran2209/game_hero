@@ -52,19 +52,22 @@ public class PlayerHealth : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-        max_health = PlayerPrefs.GetFloat(Key.PlayerHealth); ;
-        current_health = max_health;
-        playerHealthSlider.maxValue = max_health;
-        playerHealthSlider.value = max_health;
+        PlayerPrefs.SetFloat(Key.PlayerCurrentHealth, PlayerPrefs.GetFloat(Key.PlayerHealth));
+        current_health = PlayerPrefs.GetFloat(Key.PlayerHealth);
+        playerHealthSlider.maxValue = PlayerPrefs.GetFloat(Key.PlayerHealth);
+        playerHealthSlider.value = PlayerPrefs.GetFloat(Key.PlayerHealth);
     }
 
 	// Update is called once per frame
 	void Update()
 	{
-		playerHealthSlider.value = current_health;
-		txtBlood.text = $"{(int)current_health / max_health * 100}%";
+        current_health = PlayerPrefs.GetFloat(Key.PlayerCurrentHealth);
 
-		if (death)
+        playerHealthSlider.value = PlayerPrefs.GetFloat(Key.PlayerCurrentHealth);
+
+        txtBlood.text = $"{(int)PlayerPrefs.GetFloat(Key.PlayerCurrentHealth) / PlayerPrefs.GetFloat(Key.PlayerHealth) * 100}%";
+
+        if (death)
 		{
 			return;
 		}
@@ -98,11 +101,10 @@ public class PlayerHealth : MonoBehaviour
 
 	private void DecreaseHP(float dmg)
 	{
-		current_health = Mathf.Clamp(current_health - dmg, 0, max_health);
-		//Debug.Log("after decrease hp: " + current_health);
+        current_health = Mathf.Clamp(current_health - dmg, 0, PlayerPrefs.GetFloat(Key.PlayerHealth));
+        PlayerPrefs.SetFloat(Key.PlayerCurrentHealth, current_health);
 
-		PlayerPrefs.SetFloat(Key.PlayerCurrentHealth, current_health);
-		if (current_health <= 0)
+        if (current_health <= 0)
 		{
 			Deadth(2f);
 			return;
