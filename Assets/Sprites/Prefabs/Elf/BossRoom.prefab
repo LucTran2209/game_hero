@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 2547757907292233110}
   - component: {fileID: 9200160283113062258}
   - component: {fileID: 7097441998695120364}
+  - component: {fileID: 994383164336578413}
   m_Layer: 6
   m_Name: Elf Ranger
   m_TagString: Monster
@@ -172,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Attack: 300
-  Ammor: 100
+  Ammor: 60
   Health: 7000
   bloodSlider: {fileID: 3150338628734303022}
   item1: {fileID: 0}
@@ -272,7 +273,21 @@ MonoBehaviour:
   skill1Timer: 0
   AttackRain: {fileID: 9176253053715799060}
   RainNumber: 2
-  skill2Timer: 0
+  skill2Timer: 1
+--- !u!114 &994383164336578413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734124379456808090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6351086f82d95a542a9c07356f6dd5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelWinner: {fileID: 0}
+  audioWinner: {fileID: 0}
 --- !u!1 &926414524499353104
 GameObject:
   m_ObjectHideFlags: 0
