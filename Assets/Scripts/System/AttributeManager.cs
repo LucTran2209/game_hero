@@ -1,6 +1,7 @@
 ﻿using Assets.Scripts.CharacterMain.PowerBall;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,8 @@ public class AttributeManager : MonoBehaviour
 
     #region UI
     [SerializeField] Slider bloodSlider;
+    [SerializeField] TextMeshProUGUI bloodText;
+    
     #endregion
 
     #region Private Variables
@@ -57,6 +60,7 @@ public class AttributeManager : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        
         bloodSlider.maxValue = Health;
         bloodSlider.value = Health;
         maxHealth = Health;
@@ -86,7 +90,10 @@ public class AttributeManager : MonoBehaviour
     {
         currentPos = transform.position;
 
+        if (bloodText != null)
+        bloodText.text = Health.ToString();
         bloodSlider.value = Health;
+
         if (isHit)
         {
             hitDuration += Time.deltaTime;
